@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyFirstTests</string>
+    <string name="email_label">Your Email address:</string>
+    <string name="save">Save</string>
+    <string name="email_hint">Enter your Email</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="valid_email">OK</string>
+</resources>
