@@ -21,6 +21,9 @@ internal class SearchPresenter internal constructor(
 
     private var viewContract: ViewSearchContract? = null
 
+    val viewIsAttached: Boolean
+        get() = viewContract != null
+
     override fun searchGitHub(searchQuery: String) {
         viewContract?.displayLoading(true)
         repository.searchGithub(searchQuery, this)
