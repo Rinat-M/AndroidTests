@@ -9,9 +9,14 @@ internal class DetailsPresenter internal constructor(
 
     private var viewContract: ViewDetailsContract? = null
 
+    val viewIsAttached: Boolean
+        get() = viewContract != null
+
     override fun setCounter(count: Int) {
         this.count = count
     }
+
+    override fun getCounter(): Int = count
 
     override fun onIncrement() {
         count++
