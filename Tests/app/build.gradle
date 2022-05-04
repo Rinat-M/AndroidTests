@@ -12,8 +12,8 @@ android {
         applicationId "com.geekbrains.tests"
         minSdkVersion 23
         targetSdkVersion 31
-        versionCode 3
-        versionName "1.0.2"
+        versionCode 4
+        versionName "1.0.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -46,12 +46,10 @@ android {
         fake {
             applicationIdSuffix ".fake"
             versionNameSuffix "-fake"
-            buildConfigField "String", "TYPE", '"FAKE"'
         }
         real {
             applicationIdSuffix ".real"
             versionNameSuffix "-real"
-            buildConfigField "String", "TYPE", '"REAL"'
         }
     }
 }
