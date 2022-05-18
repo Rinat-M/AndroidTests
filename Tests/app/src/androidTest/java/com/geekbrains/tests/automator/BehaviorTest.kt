@@ -14,6 +14,7 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import com.geekbrains.tests.TEST_NUMBER_OF_RESULTS_FOR_FAKE_REQUEST
 
 @RunWith(AndroidJUnit4::class)
 @SdkSuppress(minSdkVersion = 18)
@@ -75,7 +76,7 @@ class BehaviorTest {
             )
         //Убеждаемся, что сервер вернул корректный результат. Обратите внимание, что количество
         //результатов может варьироваться во времени, потому что количество репозиториев постоянно меняется.
-        Assert.assertEquals(changedText.text.toString(), "Number of results: 42")
+        Assert.assertEquals(changedText.text.toString(), TEST_NUMBER_OF_RESULTS_FOR_FAKE_REQUEST)
     }
 
     //Убеждаемся, что DetailsScreen открывается
@@ -122,7 +123,7 @@ class BehaviorTest {
 
         val totalCountString = totalCountTextView.text.toString()
 
-        Assert.assertEquals(totalCountString, "Number of results: 42")
+        Assert.assertEquals(totalCountString, TEST_NUMBER_OF_RESULTS_FOR_FAKE_REQUEST)
 
         val toDetailsButton = uiDevice.findObject(By.res(packageName, "toDetailsActivityButton"))
         toDetailsButton.click()
