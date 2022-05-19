@@ -17,6 +17,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import com.geekbrains.tests.TEST_NUMBER_OF_RESULTS_FOR_FAKE_REQUEST
 
 @RunWith(AndroidJUnit4::class)
 class MainActivityEspressoTest {
@@ -64,7 +65,7 @@ class MainActivityEspressoTest {
         onView(withId(R.id.searchEditText)).perform(replaceText("algol"), closeSoftKeyboard())
         onView(withId(R.id.searchEditText)).perform(pressImeActionButton())
 
-        onView(withId(R.id.totalCountTextView)).check(matches(withText("Number of results: 42")))
+        onView(withId(R.id.totalCountTextView)).check(matches(withText(TEST_NUMBER_OF_RESULTS_FOR_FAKE_REQUEST)))
     }
 
     private fun delay(): ViewAction {
